@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace Assignment2.Controllers
 {
+    //Create controller from J2
     public class J2Controller : ApiController
     {
         [HttpGet]
@@ -50,11 +51,11 @@ namespace Assignment2.Controllers
             string response; 
             if (result ==1)
             {
-                response = "There is" + result + "way to get the sum of 10";
+                response = "There is " + result + "way to get the sum of 10";
             }
             else
             {
-                response = "There are" + result + " ways to get the sum of 10";
+                response = "There are " + result + "ways to get the sum of 10";
             }
             return response;
         }
