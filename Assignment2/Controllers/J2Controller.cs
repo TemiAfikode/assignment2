@@ -15,6 +15,7 @@ namespace Assignment2.Controllers
 
         ////Create an integer representing the index m and n
         public string Get(int m, int n)
+            //Write a program that determines how many ways a dice can be rolled to get a value of 10
         {
             int result;
             if ((m + n) >= 10)
@@ -53,6 +54,7 @@ namespace Assignment2.Controllers
             string response; 
             if (result ==1)
             {
+                //Return the response on how many ways to get the sum of 10
                 response = "There is " + result + "way to get the sum of 10";
             }
             else
