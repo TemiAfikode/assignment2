@@ -12,6 +12,8 @@ namespace Assignment2.Controllers
     {
         [HttpGet]
         [Route("api/J2/DiceGame/{m}/{n}")]
+
+        ////Create an integer representing the index m and n
         public string Get(int m, int n)
         {
             int result;

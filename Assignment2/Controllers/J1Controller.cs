@@ -13,10 +13,13 @@ namespace Assignment2.Controllers
         //Get Action to calculate calories 
         [HttpGet]
         [Route("api/j1/menu/{burger}/{drink}/{side}/{dessert}")]
+
+        //Create an integer representing the index for burger, drink, sides and dessert
         public string Get(int burger, int drink, int side, int dessert)
         {
+          //Create an integer representing total calories and assign a value
             int totalCalories = 0;
-
+            //Create an if statement if burger is equal to 1, then total calories for burger will be 0 plus 461 calories and so on as stated in the question
             if (burger == 1)
             {
                 totalCalories = totalCalories + 461; 
@@ -33,6 +36,7 @@ namespace Assignment2.Controllers
             {
                 totalCalories = totalCalories + 0;
             }
+            //Create an if statement also for drinks like the burger, the same logic applies
             if (drink == 1)
             {
                 totalCalories = totalCalories + 130;
@@ -49,6 +53,7 @@ namespace Assignment2.Controllers
             {
                 totalCalories = totalCalories + 0;
             }
+            ////Create an if statement also for sides like the burger
 
             if (side == 1)
             {
@@ -82,7 +87,7 @@ namespace Assignment2.Controllers
             {
                 totalCalories = totalCalories + 0;
             }
-
+            //Return the total calories count for each integer
             string response = "Your total calorie count is " + totalCalories;
             return response;
         }
